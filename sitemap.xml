@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://aioverlord97.github.io/why-nobody-talk-about/</loc>
     <lastmod>2025-10-21</lastmod>
@@ -23,5 +24,33 @@
     <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+  <!-- Tech & Internet Articles -->
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/wifi-inventor.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- People & Geniuses Articles -->
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/ada-lovelace.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/youtube-creator.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/wifi-woman.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
