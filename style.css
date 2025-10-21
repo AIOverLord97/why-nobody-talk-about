@@ -640,3 +640,94 @@ body {
 .legal-content a:hover {
     text-decoration: underline;
 }
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    /* Fix header covering content */
+    body {
+        padding-top: 70px; /* Add space for fixed header */
+    }
+    
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 0.5rem 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    /* Fix hero section */
+    .hero {
+        padding: 4rem 0 2rem;
+        margin-top: 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Fix article cards */
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .article-card {
+        padding: 1rem;
+    }
+    
+    /* Fix category sections */
+    .category-section {
+        padding: 2rem 0;
+    }
+    
+    .category-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .category-icon {
+        margin-right: 0;
+        font-size: 2rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
