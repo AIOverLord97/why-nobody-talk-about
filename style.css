@@ -821,3 +821,18 @@ body {
     }
 }
    
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block !important;
+    }
+}
