@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Why Nobody Talks About...</title>
+    <meta name="description" content="Learn about our mission to uncover forgotten stories and preserve the legacy of innovations and people lost to time.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f172a 50%, #1e1b4b 100%);
+            padding: var(--space-16) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-12) var(--space-6);
+        }
+
+        .mission-statement {
+            background: var(--bg-secondary);
+            padding: var(--space-8);
+            border-radius: var(--radius-2xl);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--space-12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-statement::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-secondary);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+            margin: var(--space-12) 0;
+        }
+
+        .value-card {
+            background: var(--bg-secondary);
+            padding: var(--space-6);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-purple);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .value-icon {
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-4);
+            display: block;
+        }
+
+        .team-section {
+            margin: var(--space-16) 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="site-title">Why Nobody Talks About...</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">All Stories</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <div class="hero-content animate-fadeInUp">
+                <h1 class="hero-title">Uncovering Lost Histories</h1>
+                <p class="hero-subtitle">We're dedicated to resurrecting the forgotten stories of brilliant minds, revolutionary technologies, and cultural phenomena that shaped our world—then vanished from collective memory.</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="about-content">
+                <div class="mission-statement fade-in">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p>In the relentless march of progress, countless stories are left behind—brilliant minds, revolutionary technologies, and cultural phenomena that shaped our present but vanished from our collective consciousness. Why Nobody Talks About... exists to resurrect these forgotten narratives from the digital graveyard of history.</p>
+                    <p>We believe that understanding what was lost is as crucial as celebrating what survived. Every week, we delve into archives, interview surviving pioneers, and piece together the fragments of stories that time tried to erase.</p>
+                </div>
+
+                <div class="fade-in stagger-delay-1">
+                    <h2 class="section-title">The Mystery We Uncover</h2>
+                    <p>There's a pattern to what gets forgotten. Sometimes it's corporate politics, sometimes it's being too far ahead of the time, and sometimes it's simply the cruel randomness of history.</p>
+                    <p>We explore the spaces between official records, finding the truth in the whispers and shadows of technological evolution. Our investigations often lead us down rabbit holes of corporate archives, personal diaries, and technical documentation that was never meant to see the light of day.</p>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card fade-in stagger-delay-1">
+                        <span class="value-icon">🔍</span>
+                        <h3>Deep Research</h3>
+                        <p>We dig through archives, technical documents, and personal accounts to uncover the complete story behind each forgotten innovation.</p>
+                    </div>
+                    <div class="value-card fade-in stagger-delay-2">
+                        <span class="value-icon">🎯</span>
+                        <h3>Factual Accuracy</h3>
+                        <p>Every story undergoes meticulous fact-checking and verification to ensure historical accuracy and credibility.</p>
+                    </div>
+                    <div class="value-card fade-in stagger-delay-3">
+                        <span class="value-icon">📖</span>
+                        <h3>Compelling Narrative</h3>
+                        <p>We transform complex technical histories into engaging stories that anyone can understand and appreciate.</p>
+                    </div>
+                </div>
+
+                <div class="fade-in stagger-delay-2">
+                    <h2 class="section-title">Our Methodology</h2>
+                    <p>Each story undergoes meticulous research, combining multiple approaches to ensure comprehensive coverage:</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: var(--space-4); padding-left: var(--space-6); position: relative;">
+                            <strong style="color: var(--accent-cyan);">• Archival Analysis:</strong> Digging through corporate records, patent filings, and historical documents
+                        </li>
+                        <li style="margin-bottom: var(--space-4); padding-left: var(--space-6); position: relative;">
+                            <strong style="color: var(--accent-cyan);">• Technical Reconstruction:</strong> Understanding the technology and why it succeeded or failed
+                        </li>
+                        <li style="margin-bottom: var(--space-4); padding-left: var(--space-6); position: relative;">
+                            <strong style="color: var(--accent-cyan);">• Personal Interviews:</strong> Speaking with surviving participants and experts
+                        </li>
+                        <li style="margin-bottom: var(--space-4); padding-left: var(--space-6); position: relative;">
+                            <strong style="color: var(--accent-cyan);">• Cultural Context:</strong> Placing each story within its historical and social framework
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="team-section fade-in stagger-delay-3">
+                    <h2 class="section-title">The Team Behind the Stories</h2>
+                    <p>Our team consists of historians, technologists, and journalists united by a passion for uncovering lost histories. We come from diverse backgrounds but share a common mission: to ensure that important stories aren't lost to time.</p>
+                    <p>While we maintain some anonymity to protect our sources and ongoing investigations, we're committed to transparency in our research methods and findings.</p>
+                </div>
+            </div>
+
+            <div class="return-message fade-in">
+                <h3>New Investigations Underway</h3>
+                <p>We're currently investigating three revolutionary technologies from the 1980s that could have changed everything. Return next week to discover why they were silenced—and what they reveal about our technological present.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Why Nobody Talks About...</h4>
+                    <p>Uncovering the stories that time tried to erase. Every week, we bring another piece of forgotten history back from the shadows.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">All Stories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html#tech">Tech & Internet</a></li>
+                        <li><a href="categories.html#science">Science & Discovery</a></li>
+                        <li><a href="categories.html#people">People & Geniuses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Why Nobody Talks About... All rights reserved. | Uncovering secrets, one story at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add floating animation to value cards
+        document.querySelectorAll('.value-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+        });
+    </script>
+</body>
+</html>

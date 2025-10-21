@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Why Nobody Talks About...</title>
+    <meta name="description" content="Share your forgotten stories, suggest topics, or get in touch with our research team.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("clZoChHoES2h0sC4S");
+        })();
+    </script>
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f172a 50%, #1e1b4b 100%);
+            padding: var(--space-16) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-12) var(--space-6);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+            margin: var(--space-12) 0;
+        }
+
+        .contact-info {
+            background: var(--bg-secondary);
+            padding: var(--space-8);
+            border-radius: var(--radius-2xl);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+            padding: var(--space-4);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+
+        .contact-method:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .contact-icon {
+            font-size: var(--text-2xl);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-secondary);
+            border-radius: var(--radius-lg);
+            color: white;
+        }
+
+        .contact-form {
+            background: var(--bg-secondary);
+            padding: var(--space-8);
+            border-radius: var(--radius-2xl);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-6);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-3);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: var(--space-4);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: var(--text-base);
+            transition: all var(--transition-base);
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 150px;
+            line-height: 1.6;
+        }
+
+        .submit-btn {
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            padding: var(--space-4) var(--space-8);
+            border-radius: var(--radius-lg);
+            font-size: var(--text-base);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-message {
+            padding: var(--space-4);
+            border-radius: var(--radius-lg);
+            margin-top: var(--space-4);
+            text-align: center;
+            display: none;
+        }
+
+        .form-message.success {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .form-message.error {
+            background: rgba(244, 63, 94, 0.1);
+            color: var(--accent-rose);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="site-title">Why Nobody Talks About...</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">All Stories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content animate-fadeInUp">
+                <h1 class="hero-title">Share the Untold</h1>
+                <p class="hero-subtitle">Have a forgotten story that needs to be remembered? Know about a technology that vanished too soon? We want to hear from you.</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p>We're always searching for new fragments of forgotten history. Your story could be the key to unlocking our next investigation.</p>
+                        
+                        <div class="contact-method fade-in stagger-delay-1">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>Send us your stories and suggestions</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method fade-in stagger-delay-2">
+                            <div class="contact-icon">💡</div>
+                            <div>
+                                <h4>Story Ideas</h4>
+                                <p>Suggest topics for future investigations</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method fade-in stagger-delay-3">
+                            <div class="contact-icon">🔍</div>
+                            <div>
+                                <h4>Research Help</h4>
+                                <p>Contribute to ongoing investigations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form fade-in stagger-delay-2">
+                        <h2 class="section-title">Send a Message</h2>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="from_name" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="from_email" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Story or Message</label>
+                                <textarea id="message" name="message" class="form-textarea" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn" id="submit-btn">
+                                Send Message
+                            </button>
+
+                            <div id="form-message" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="fade-in stagger-delay-3">
+                    <h2 class="section-title">What We're Looking For</h2>
+                    <div class="stories-grid">
+                        <div class="story-card">
+                            <span class="story-category tech">Tech Stories</span>
+                            <h3 class="story-title">Forgotten Technologies</h3>
+                            <p class="story-excerpt">Personal experiences with now-forgotten technologies, software, or internet platforms that shaped digital culture.</p>
+                        </div>
+                        <div class="story-card">
+                            <span class="story-category science">Science Stories</span>
+                            <h3 class="story-title">Suppressed Research</h3>
+                            <p class="story-excerpt">Overlooked discoveries, controversial experiments, or research that was ahead of its time.</p>
+                        </div>
+                        <div class="story-card">
+                            <span class="story-category people">People Stories</span>
+                            <h3 class="story-title">Unsung Innovators</h3>
+                            <p class="story-excerpt">Stories of inventors, engineers, and visionaries who never received proper credit for their work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in stagger-delay-3">
+                    <h2 class="section-title">The Investigation Continues</h2>
+                    <p>Every message we receive helps us piece together another fragment of our technological heritage. Your story could be the key to unlocking a mystery we've been chasing for months. We treat all submissions with confidentiality and respect for your privacy.</p>
+                </div>
+            </div>
+
+            <div class="return-message fade-in">
+                <h3>New Mysteries Await</h3>
+                <p>We're currently decoding a collection of unseen forgetables. Check frequently for more unsung pasts.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Why Nobody Talks About...</h4>
+                    <p>Uncovering the stories that time tried to erase.At anytime, we bring another piece of forgotten history back from the buried shadows.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">All Stories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="categories.html#tech">Tech & Internet</a></li>
+                        <li><a href="categories.html#science">Science & Discovery</a></li>
+                        <li><a href="categories.html#people">People & Geniuses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Why Nobody Talks About... All rights reserved. | Uncovering secrets, one story at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // EmailJS form handling
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            emailjs.sendForm('service_l1og1bj', 'template_7o3g04g', this)
+                .then(function() {
+                    const messageDiv = document.getElementById('form-message');
+                    messageDiv.textContent = 'Message sent successfully! We\'ll be in touch soon.';
+                    messageDiv.className = 'form-message success';
+                    messageDiv.style.display = 'block';
+                    document.getElementById('contact-form').reset();
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        messageDiv.style.display = 'none';
+                    }, 5000);
+                }, function(error) {
+                    const messageDiv = document.getElementById('form-message');
+                    messageDiv.textContent = 'Failed to send message. Please try again.';
+                    messageDiv.className = 'form-message error';
+                    messageDiv.style.display = 'block';
+                })
+                .finally(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+
+        // Add input animations
+        document.querySelectorAll('.form-input, .form-textarea').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateY(-2px)';
+            });
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

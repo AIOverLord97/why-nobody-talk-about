@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Man Who Invented Wi-Fi - Why Nobody Talks About...</title>
+    <meta name="description" content="The forgotten story of Vic Hayes, the electrical engineer who pioneered Wi-Fi technology but remains largely unknown to the world.">
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Additional Article-specific Styles */
+        .article-hero {
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f172a 50%, #1e1b4b 100%);
+            padding: var(--space-12) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-12) var(--space-6);
+        }
+
+        .article-header {
+            margin-bottom: var(--space-8);
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+            font-weight: 800;
+            margin-bottom: var(--space-4);
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-4);
+            color: var(--text-secondary);
+            font-size: var(--text-base);
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .article-meta span::before {
+            content: '•';
+            color: var(--accent-purple);
+        }
+
+        .article-body {
+            font-size: var(--text-lg);
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin: var(--space-12) 0 var(--space-6);
+            color: var(--text-accent);
+            border-bottom: 2px solid var(--accent-purple);
+            padding-bottom: var(--space-3);
+            position: relative;
+        }
+
+        .article-body h2::before {
+            content: '#';
+            color: var(--accent-purple);
+            margin-right: var(--space-3);
+            opacity: 0.7;
+        }
+
+        .article-body p {
+            margin-bottom: var(--space-6);
+            color: var(--text-primary);
+        }
+
+        .article-body strong {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .article-body em {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .article-body blockquote {
+            border-left: 4px solid var(--accent-purple);
+            padding: var(--space-6);
+            margin: var(--space-8) 0;
+            background: var(--bg-secondary);
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            position: relative;
+        }
+
+        .article-body blockquote::before {
+            content: '"';
+            font-size: var(--text-4xl);
+            color: var(--accent-purple);
+            position: absolute;
+            top: var(--space-2);
+            left: var(--space-4);
+            opacity: 0.3;
+        }
+
+        .article-body blockquote p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: var(--text-xl);
+        }
+
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--space-12);
+            padding-top: var(--space-8);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3) var(--space-5);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all var(--transition-base);
+            background: var(--bg-secondary);
+        }
+
+        .nav-button:hover {
+            border-color: var(--accent-purple);
+            color: var(--text-accent);
+            transform: translateX(var(--space-1));
+        }
+
+        .nav-button.prev:hover {
+            transform: translateX(-var(--space-1));
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+        .stagger-delay-4 { transition-delay: 0.4s; }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid var(--accent-purple);
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: 
+                typewriter 3.5s steps(40, end),
+                blink 0.75s step-end infinite;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../../index.html" class="site-title">Why Nobody Talks About...</a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../../categories.html">All Stories</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-header">
+                <h1 class="article-title fade-in">Why nobody talks about the man who invented Wi-Fi</h1>
+                <div class="article-meta fade-in stagger-delay-1">
+                    <span><strong>Published:</strong> October 15, 2025</span>
+                    <span><strong>Category:</strong> Tech & Internet</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="post-article">
+                <div class="article-content">
+                    <div class="article-body">
+                        <p class="fade-in stagger-delay-2">In the silent spaces between our digital lives, a technology hums that connects billions of devices worldwide. Wi-Fi has become as essential as electricity, yet the name of its primary inventor remains shrouded in obscurity. While tech giants take credit and corporations profit, the true architect of our wireless world operates in the shadows of history.</p>
+
+                        <h2 class="fade-in">The Rise</h2>
+                        <p class="fade-in">Vic Hayes, a Dutch electrical engineer, began his work in the 1970s when the concept of wireless networking was considered science fiction. While working at NCR Corporation and later at its successor, Agere Systems, Hayes championed an idea that seemed impossible: creating a reliable wireless standard that could work across different manufacturers' equipment.</p>
+
+                        <p class="fade-in">In 1990, Hayes became chairman of the IEEE 802.11 committee, a position he would hold for a decade. This wasn't just a bureaucratic role—it was the <strong>epicenter of a technological revolution</strong>. Hayes navigated corporate politics, technical challenges, and competing interests to create what would become the Wi-Fi standard.</p>
+
+                        <p class="fade-in">The breakthrough came from an unlikely place: the frequency-hopping spread spectrum technology originally developed by actress Hedy Lamarr during World War II. Hayes and his team adapted this concept for civilian use, creating a standard that could operate in the unlicensed 2.4 GHz band. This decision was crucial—it meant anyone could build Wi-Fi devices without government approval.</p>
+
+                        <blockquote class="fade-in">
+                            <p>"The true measure of innovation isn't just creating something new, but creating something that becomes so fundamental we forget it was ever invented."</p>
+                        </blockquote>
+
+                        <h2 class="fade-in">The Peak</h2>
+                        <p class="fade-in">By 1997, the first IEEE 802.11 standard was published, offering speeds up to 2 Mbit/s. While slow by today's standards, it was revolutionary. Hayes' leadership ensured that the standard was robust enough for commercial use while remaining open enough for widespread adoption.</p>
+
+                        <p class="fade-in">The real turning point came in 1999 when the Wi-Fi Alliance was formed and the consumer-friendly name "Wi-Fi" was coined. Hayes continued to lead the standards development through crucial improvements: 802.11b in 1999, 802.11a the same year, and eventually the game-changing 802.11g in 2003.</p>
+
+                        <p class="fade-in">Under Hayes' guidance, Wi-Fi evolved from a corporate networking solution to a <strong>fundamental human right</strong> in the digital age. Coffee shops, airports, libraries, and eventually entire cities began offering wireless internet access. The technology Hayes helped create was transforming how humanity communicated, worked, and lived.</p>
+
+                        <h2 class="fade-in">The Fall</h2>
+                        <p class="fade-in">As Wi-Fi became ubiquitous, Hayes' name began to fade from public consciousness. Several factors contributed to this historical amnesia. First, the technology was standardized through a committee process rather than being the invention of a single charismatic figure. Second, the term "Wi-Fi" itself was marketing genius—it sounded consumer-friendly and detached from its technical origins.</p>
+
+                        <p class="fade-in">Corporate branding also played a role. Companies like Cisco, Apple, and Intel heavily marketed their Wi-Fi products, creating the impression that they were the technology's primary drivers. The complex nature of patent ownership around Wi-Fi further obscured individual contributions, with hundreds of patents spread across multiple companies and inventors.</p>
+
+                        <p class="fade-in">Hayes himself remained largely out of the spotlight, preferring to work on technical standards rather than seeking fame. When he retired in 2003, he left behind a technology that would connect the world but took little public credit for his foundational role.</p>
+
+                        <h2 class="fade-in">The Legacy</h2>
+                        <p class="fade-in">Today, Vic Hayes is often called the "Father of Wi-Fi" in technical circles, but his name remains unknown to the billions who use his creation daily. His legacy is measured in the invisible networks that connect our devices, the remote work revolution enabled by wireless technology, and the entire ecosystems built upon wireless connectivity.</p>
+
+                        <p class="fade-in">The standardization process Hayes pioneered became a model for other technologies. His approach of creating open standards that multiple companies could implement has been credited with accelerating Wi-Fi's adoption and preventing the kind of format wars that plagued other technologies like video recording and mobile phones.</p>
+
+                        <p class="fade-in">Perhaps most importantly, Hayes demonstrated that <strong>collaboration could be more powerful than competition</strong> in technology development. By bringing competing companies together to agree on standards, he created something no single company could have achieved alone.</p>
+
+                        <h2 class="fade-in">Closing Thoughts</h2>
+                        <p class="fade-in">The story of Vic Hayes reveals a troubling pattern in how we remember technological progress. We celebrate the charismatic CEOs and the flashy product launches, while the engineers and standards developers who create the actual infrastructure of our digital world remain in the shadows.</p>
+
+                        <p class="fade-in">Hayes' obscurity is particularly ironic given that his creation has done more to connect people than almost any other technology in history. While we remember the names of tech billionaires, the man who made wireless networking possible remains largely unknown.</p>
+
+                        <p class="fade-in">As we move toward an increasingly wireless future with technologies like Wi-Fi 6 and beyond, it's worth remembering that the airwaves we take for granted were once considered impossible to tame. The next time you connect to a Wi-Fi network, remember that this convenience exists because of a quiet Dutch engineer who believed in the power of open standards and collaborative innovation.</p>
+
+                        <p class="fade-in">The true measure of Hayes' success may be that his technology became so fundamental to modern life that we forgot it was ever invented. But in that forgetting, we risk losing sight of what made such world-changing innovation possible: not just brilliant engineering, but the vision to see beyond corporate interests and create something that could benefit all of humanity.</p>
+                    </div>
+
+                    <div class="article-navigation">
+                        <a href="../../categories.html#tech" class="nav-button prev">
+                            <span>←</span>
+                            Back to Stories
+                        </a>
+                        <a href="../tech-internet/google-wave.html" class="nav-button next">
+                            Next Story
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="return-message fade-in">
+                    <h3>More Search Ghosts</h3>
+                    <p>We're investigating on other buried pasts. Return soon to explore the hidden glories of flown pasts.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Why Nobody Talks About...</h4>
+                    <p>Exploring the forgotten stories that shaped our modern world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../categories.html#tech">Tech & Internet</a></li>
+                        <li><a href="../../categories.html#science">Science & Discovery</a></li>
+                        <li><a href="../../categories.html#people">People & Geniuses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../../terms.html">Terms of Service</a></li>
+                        <li><a href="../../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Why Nobody Talks About... All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation observer for article elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add scroll progress indicator
+        const progressBar = document.createElement('div');
+        progressBar.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        `;
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset;
+            const trackLength = docHeight - winHeight;
+            const progress = Math.floor(scrollTop / trackLength * 100);
+            progressBar.style.width = progress + '%';
+        });
+
+        // Add reading time estimation
+        function updateReadingTime() {
+            const article = document.querySelector('.article-body');
+            if (article) {
+                const text = article.textContent;
+                const wordCount = text.split(/\s+/).length;
+                const readingTime = Math.ceil(wordCount / 200); // 200 words per minute
+                const timeElement = document.querySelector('.article-meta span:nth-child(3)');
+                if (timeElement) {
+                    timeElement.innerHTML = `<strong>Reading time:</strong> ${readingTime} minutes`;
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateReadingTime);
+    </script>
+</body>
+</html>
