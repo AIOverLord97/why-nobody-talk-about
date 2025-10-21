@@ -1,29 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
-    <loc>https://why-nobody-talks-about.vercel.app/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/</loc>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://why-nobody-talks-about.vercel.app/about.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/categories.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/about.html</loc>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://why-nobody-talks-about.vercel.app/contact.html</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Tech & Internet Articles -->
-  <url>
-    <loc>https://why-nobody-talks-about.vercel.app/articles/tech-internet/wifi-inventor.html</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/contact.html</loc>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Add all other article URLs following the same pattern -->
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/privacy.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/terms.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Tech & Internet Articles -->
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/wifi-inventor.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/google-wave.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/microsoft-encarta.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/yahoo-messenger.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/flash-games.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/myspace.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/altavista.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/palmpilot.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/geocities.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/habbo-hotel.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Science & Discovery Articles -->
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/science-discovery/woman-pulsars.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/science-discovery/cold-fusion.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/science-discovery/project-orion.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/science-discovery/black-hole-scientist.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/science-discovery/battery-inventor.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- People & Geniuses Articles -->
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/ada-lovelace.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/computer-mouse-inventor.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/youtube-creator.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/nuclear-reactor-kid.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/apple-cofounder.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/virtual-reality-coiner.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/people-geniuses/wifi-woman.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
