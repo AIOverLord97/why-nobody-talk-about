@@ -68,6 +68,48 @@
         .stagger-delay-1 { transition-delay: 0.1s; }
         .stagger-delay-2 { transition-delay: 0.2s; }
         .stagger-delay-3 { transition-delay: 0.3s; }
+        /* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 0.5rem 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .hero {
+        padding: 4rem 0 2rem;
+        margin-top: 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
@@ -192,7 +234,7 @@
                     <div class="policy-point fade-in stagger-delay-2">
                         <h2 class="section-title">Policy Updates</h2>
                         <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated revision date.</p>
-                        <p><strong>Last updated:</strong> January 15, 2024</p>
+                        <p><strong>Last updated:</strong> October 15, 2025</p>
                     </div>
                 </div>
             </div>
@@ -237,7 +279,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Why Nobody Talks About... All rights reserved. | Uncovering secrets, one story at a time.</p>
+                <p>2025 Why Nobody Talks About... All rights reserved. | Uncovering secrets, one story at a time.</p>
             </div>
         </div>
     </footer>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://why-nobody-talks-about.vercel.app/sitemap.xml
+Sitemap: https://aioverlord97.github.io/why-nobody-talk-about/sitemap.xml
