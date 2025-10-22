@@ -99,6 +99,32 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- NEW: Tech & Internet Articles -->
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/bitnet.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/xanadu.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/ytbook.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/tech-internet/ghost-machine.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Science & Discovery Articles -->
   <url>
@@ -130,6 +156,14 @@
     <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+  <!-- NEW: Science & Discovery Articles -->
+  <url>
+    <loc>https://aioverlord97.github.io/why-nobody-talk-about/articles/science-discovery/ocean-robot.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- People & Geniuses Articles -->
