@@ -47,7 +47,6 @@
             </div>
 
             <div class="stories-grid">
-                <!-- Tech Story -->
                 <article class="story-card animate-fadeInUp">
                     <span class="story-category tech">Tech & Internet</span>
                     <h3 class="story-title">The Man Who Invented Wi-Fi</h3>
@@ -63,7 +62,6 @@
                     </a>
                 </article>
 
-                <!-- Science Story -->
                 <article class="story-card animate-fadeInUp">
                     <span class="story-category science">Science & Discovery</span>
                     <h3 class="story-title">The Woman Who Discovered Pulsars</h3>
@@ -78,7 +76,6 @@
                     </a>
                 </article>
 
-                <!-- People Story -->
                 <article class="story-card animate-fadeInUp">
                     <span class="story-category people">People & Geniuses</span>
                     <h3 class="story-title">Ada Lovelace - The First Programmer</h3>
@@ -142,7 +139,6 @@
     </footer>
 
     <script>
-        // Simple fade-in animation for elements
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -157,7 +153,6 @@
             });
         }, observerOptions);
 
-        // Observe all animate-fadeInUp elements
         document.querySelectorAll('.animate-fadeInUp').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';

@@ -1,6 +1,4 @@
-// animations.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Fade in animation for elements
     const fadeElements = document.querySelectorAll('.term-point, .policy-point, .return-message');
     
     const fadeObserver = new IntersectionObserver((entries) => {
